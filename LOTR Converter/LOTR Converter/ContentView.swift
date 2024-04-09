@@ -9,13 +9,57 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Image(.background)
+                .resizable()
+                .ignoresSafeArea()
+            VStack {
+                Image(.prancingpony)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
+                Text("Currency Exchange")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                HStack {
+                    VStack {
+                        HStack {
+                            Image(.silverpenny)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 33)
+                            Text("Silver piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
+                        }
+                        // Textfield
+                        Text("Textfield")
+                    }
+                    Image(systemName: "equal")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                        .symbolEffect(.pulse)
+                    VStack {
+                        HStack {
+                            Text("Gold Piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
+                            Image(.goldpiece)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 33)
+                        }
+                        
+                        Text("Textfield")
+                    }
+                }
+                Spacer()
+                // Info button
+                Image(systemName: "info.circle.fill")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+            }
         }
-        .padding()
     }
 }
 
