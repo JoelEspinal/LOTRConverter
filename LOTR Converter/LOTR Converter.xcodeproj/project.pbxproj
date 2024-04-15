@@ -11,6 +11,7 @@
 		9B13AC042BC4E51100BBE45D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B13AC032BC4E51100BBE45D /* ContentView.swift */; };
 		9B13AC062BC4E51200BBE45D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B13AC052BC4E51200BBE45D /* Assets.xcassets */; };
 		9B13AC092BC4E51200BBE45D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B13AC082BC4E51200BBE45D /* Preview Assets.xcassets */; };
+		9B1575212BCC21CB00AAEF39 /* ExcangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1575202BCC21CB00AAEF39 /* ExcangeInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		9B13AC032BC4E51100BBE45D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9B13AC052BC4E51200BBE45D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B13AC082BC4E51200BBE45D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9B1575202BCC21CB00AAEF39 /* ExcangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcangeInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				9B13AC012BC4E51100BBE45D /* LOTR_ConverterApp.swift */,
 				9B13AC032BC4E51100BBE45D /* ContentView.swift */,
+				9B1575202BCC21CB00AAEF39 /* ExcangeInfo.swift */,
 				9B13AC052BC4E51200BBE45D /* Assets.xcassets */,
 				9B13AC072BC4E51200BBE45D /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B13AC042BC4E51100BBE45D /* ContentView.swift in Sources */,
+				9B1575212BCC21CB00AAEF39 /* ExcangeInfo.swift in Sources */,
 				9B13AC022BC4E51100BBE45D /* LOTR_ConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
