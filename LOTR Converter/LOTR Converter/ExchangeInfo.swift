@@ -25,7 +25,9 @@ struct ExcangeInfo: View {
                     .font(.title2)
                     .padding()
                 // exchange rates
-//                ExtractedView()
+                ExtractedView(leftImage: .goldpiece, text: "2 Golds Piece = 4 Gold Pennies", rightImage: .goldpenny)
+                ExtractedView(leftImage: .silverpiece, text: "1 Silver Piece = 4 Silver Pieces", rightImage: .silverpenny)
+                ExtractedView(leftImage: .goldpiece, text: "1 Silver Penny = 100 Copper Pennies", rightImage: .goldpenny)
                 
                 // done button
                 Button("Done") {
