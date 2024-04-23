@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExcangeInfo: View {
+struct ExchangeInfo: View {
     var body: some View {
         ZStack {
             // backround
@@ -25,9 +25,9 @@ struct ExcangeInfo: View {
                     .font(.title2)
                     .padding()
                 // exchange rates
-                ExtractedView(leftImage: .goldpiece, text: "2 Golds Piece = 4 Gold Pennies", rightImage: .goldpenny)
-                ExtractedView(leftImage: .silverpiece, text: "1 Silver Piece = 4 Silver Pieces", rightImage: .silverpenny)
-                ExtractedView(leftImage: .goldpiece, text: "1 Silver Penny = 100 Copper Pennies", rightImage: .goldpenny)
+                ExchangeRate(leftImage: .goldpiece, text: "2 Golds Piece = 4 Gold Pennies", rightImage: .goldpenny)
+                ExchangeRate(leftImage: .silverpiece, text: "1 Silver Piece = 4 Silver Pieces", rightImage: .silverpenny)
+                ExchangeRate(leftImage: .goldpiece, text: "1 Silver Penny = 100 Copper Pennies", rightImage: .goldpenny)
                 
                 // done button
                 Button("Done") {
@@ -45,6 +45,6 @@ struct ExcangeInfo: View {
 }
 
 #Preview {
-    ExcangeInfo()
+    ExchangeInfo()
 }
 
