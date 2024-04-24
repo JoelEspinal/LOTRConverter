@@ -27,7 +27,7 @@ struct SelectCurrency: View {
                     CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny")
                     CurrencyIcon(currencyImage: .silverpenny, currencyName: "Silver Penny")
                     CurrencyIcon(currencyImage: .silverpiece, currencyName: "Silver Piece")
-                    CurrencyIcon(currencyImage: .copperpenny, currencyName: "Gold Penny")
+                    CurrencyIcon(currencyImage: .goldpenny, currencyName: "Gold Penny")
                     CurrencyIcon(currencyImage: .goldpiece, currencyName: "Gold Piece")
                 }
                 
@@ -43,7 +43,7 @@ struct SelectCurrency: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.brown)
-                .font(.largeTitle)  
+                .font(.largeTitle)
                 .padding()
                 .foregroundColor(.white)
             }
