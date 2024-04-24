@@ -20,13 +20,20 @@ struct SelectCurrency: View {
                 .background(.brown)
             VStack {
                 // Text
-                Text("Hello World")
+                Text("Select the currency you are staring with:")
                     .fontWeight(.bold)
                 // currency icons
-
+                LazyVGrid(columns: [GridItem(), GridItem() ,GridItem()]) {
+                    CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny")
+                    CurrencyIcon(currencyImage: .silverpenny, currencyName: "Silver Penny")
+                    CurrencyIcon(currencyImage: .silverpiece, currencyName: "Silver Piece")
+                    CurrencyIcon(currencyImage: .copperpenny, currencyName: "Gold Penny")
+                    CurrencyIcon(currencyImage: .goldpiece, currencyName: "Gold Piece")
+                }
+                
                 // Done Button
                 // Text
-                Text("Hello World")
+                Text("Select the currency you would like to convert to:")
                     .fontWeight(.bold)
                 // currency icons
                 
@@ -36,7 +43,7 @@ struct SelectCurrency: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.brown)
-                .font(.largeTitle)
+                .font(.largeTitle)  
                 .padding()
                 .foregroundColor(.white)
             }
