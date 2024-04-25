@@ -11,6 +11,15 @@ struct SelectCurrency: View {
     
     @Environment(\.dismiss) var  dismiss
     
+    let icons = [ 
+            CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny"),
+            CurrencyIcon(currencyImage: .silverpenny, currencyName: "Silver Penny"),
+            CurrencyIcon(currencyImage: .silverpiece, currencyName: "Silver Piece"),
+            CurrencyIcon(currencyImage: .goldpenny, currencyName: "Gold Penny"),
+            CurrencyIcon(currencyImage: .goldpiece, currencyName: "Gold Piece")
+                ]
+    
+    
     var body: some View {
         ZStack {
             // Background image
@@ -23,12 +32,12 @@ struct SelectCurrency: View {
                 Text("Select the currency you are staring with:")
                     .fontWeight(.bold)
                 // currency icons
+                
+                
                 LazyVGrid(columns: [GridItem(), GridItem() ,GridItem()]) {
-                    CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny")
-                    CurrencyIcon(currencyImage: .silverpenny, currencyName: "Silver Penny")
-                    CurrencyIcon(currencyImage: .silverpiece, currencyName: "Silver Piece")
-                    CurrencyIcon(currencyImage: .goldpenny, currencyName: "Gold Penny")
-                    CurrencyIcon(currencyImage: .goldpiece, currencyName: "Gold Piece")
+                    ForEach(0..<5) { index in
+                        icons[index]
+                    }
                 }
                 
                 // Done Button
@@ -37,7 +46,7 @@ struct SelectCurrency: View {
                     .fontWeight(.bold)
                 // currency icons
                 
-                // Done Button
+                // Done Buttons
                 Button("Done") {
                     dismiss()
                 }
