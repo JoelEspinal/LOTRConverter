@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showExchangeInfo = false
+    @State var showSelectCurrency = false
+    
     @State var leftAmount = ""
     @State var rightAmount = ""
     
@@ -40,7 +42,11 @@ struct ContentView: View {
                                 .foregroundStyle(.white)
                             
                             .padding(.bottom, -5)
+                            .onTapGesture {
+                                showSelectCurrency.toggle()
+                            }
                         }
+                        
                         // Textfield
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
@@ -60,6 +66,9 @@ struct ContentView: View {
                                 .frame(height: 33)
                         }
                         .padding(.bottom, -5)
+                        .onTapGesture {
+                            showSelectCurrency.toggle()
+                        }
                         
                         // Textfield
                         TextField("Amount", text: $rightAmount)
