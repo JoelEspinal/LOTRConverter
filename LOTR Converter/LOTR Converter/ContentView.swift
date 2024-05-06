@@ -99,7 +99,7 @@ struct ContentView: View {
             })
             
             .sheet(isPresented: $showSelectCurrency, content: {
-                SelectCurrency(leftCurrency: self.leftCurrency, rightCurrency: rightCurrency)
+                SelectCurrency(topCurrency: self.leftCurrency, bottomCurrency: rightCurrency)
             })
         }
     }
