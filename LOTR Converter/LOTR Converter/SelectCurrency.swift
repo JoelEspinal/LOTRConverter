@@ -2,7 +2,7 @@
 //  SelectCurrency.swift
 //  LOTR Converter
 //
-//  Created by Joel Espinal (ClaroDom) on 24/4/24.
+//  Created by Joel Espinal (JoelEspinal) on 24/4/24.
 //
 
 import SwiftUI
@@ -10,8 +10,9 @@ import SwiftUI
 struct SelectCurrency: View {
     
     @Environment(\.dismiss) var  dismiss
+    @State var selectedCurrency: Currency
     
-    let icons = [ 
+    let icons = [
             CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny"),
             CurrencyIcon(currencyImage: .silverpenny, currencyName: "Silver Penny"),
             CurrencyIcon(currencyImage: .silverpiece, currencyName: "Silver Piece"),
@@ -36,13 +37,22 @@ struct SelectCurrency: View {
                 
                 LazyVGrid(columns: [GridItem(), GridItem() ,GridItem()]) {
                     ForEach(Currency.allCases) { currency in
-                        CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
-                            .shadow(color: .black, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 25)
-                                    .stroke(lineWidth: 3)
-                                    .opacity(0.5)
-                            }
+                        if selectedCurrency == currency {
+                            CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                                .shadow(color: .black, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 25)
+                                        .stroke(lineWidth: 3)
+                                        .opacity(0.5)
+                                }
+                        } else {
+                            CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                                .onTapGesture {
+                                    selectedCurrency = currency
+                                }
+                        }
+                        
+                        
                     }
                 }
                 
@@ -69,5 +79,5 @@ struct SelectCurrency: View {
 }
 
 #Preview {
-    SelectCurrency()
+    SelectCurrency(selectedCurrency: .silverPiece)
 }
