@@ -22,7 +22,7 @@ enum Currency: Double, CaseIterable, Identifiable {
             case .copperPenny:
                     .copperpenny
             case .silverPenny:
-                    .silverpiece
+                    .silverpenny
             case .silverPiece:
                     .silverpiece
             case .goldPenny:
