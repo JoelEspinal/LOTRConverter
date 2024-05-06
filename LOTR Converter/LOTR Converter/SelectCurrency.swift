@@ -11,16 +11,7 @@ struct SelectCurrency: View {
     
     @Environment(\.dismiss) var  dismiss
     @State var selectedCurrency: Currency
-    
-    let icons = [
-            CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny"),
-            CurrencyIcon(currencyImage: .silverpenny, currencyName: "Silver Penny"),
-            CurrencyIcon(currencyImage: .silverpiece, currencyName: "Silver Piece"),
-            CurrencyIcon(currencyImage: .goldpenny, currencyName: "Gold Penny"),
-            CurrencyIcon(currencyImage: .goldpiece, currencyName: "Gold Piece")
-                ]
-    
-    
+
     var body: some View {
         ZStack {
             // Background image
