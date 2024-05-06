@@ -12,6 +12,9 @@ struct ContentView: View {
     @State var leftAmount = ""
     @State var rightAmount = ""
     
+    @State var leftCurrency: Currency = .silverPiece
+    @State var rightCurrency: Currency = .goldPiece
+    
     var body: some View {
         ZStack {
             Image(.background)
@@ -28,11 +31,11 @@ struct ContentView: View {
                 HStack {
                     VStack {
                         HStack {
-                            Image(.silverpenny)
+                            Image(leftCurrency.image)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 33)
-                            Text("Silver piece")
+                            Text(leftCurrency.name)
                                 .font(.headline)
                                 .foregroundStyle(.white)
                             
@@ -48,10 +51,10 @@ struct ContentView: View {
                         .symbolEffect(.pulse)
                     VStack {
                         HStack {
-                            Text("Gold Piece")
+                            Text(rightCurrency.name)
                                 .font(.headline)
                                 .foregroundStyle(.white)
-                            Image(.goldpiece)
+                            Image(rightCurrency.image)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 33)
