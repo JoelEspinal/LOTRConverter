@@ -35,8 +35,8 @@ struct SelectCurrency: View {
                 
                 
                 LazyVGrid(columns: [GridItem(), GridItem() ,GridItem()]) {
-                    ForEach(0..<5) { index in
-                        icons[index]
+                    ForEach(Currency.allCases) { currency in
+                        CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
                     }
                 }
                 
