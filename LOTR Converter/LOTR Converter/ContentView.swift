@@ -91,11 +91,16 @@ struct ContentView: View {
                             .foregroundStyle(.white)
                     }
                     .padding(.trailing)
-                    .sheet(isPresented: $showExchangeInfo, content: {
-                        ExchangeInfo()
-                    })
                 }
             }
+            
+            .sheet(isPresented: $showExchangeInfo, content: {
+                ExchangeInfo()
+            })
+            
+            .sheet(isPresented: $showSelectCurrency, content: {
+                SelectCurrency(leftCurrency: self.leftCurrency, rightCurrency: rightCurrency)
+            })
         }
     }
 }
