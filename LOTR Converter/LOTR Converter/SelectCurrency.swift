@@ -37,6 +37,12 @@ struct SelectCurrency: View {
                 LazyVGrid(columns: [GridItem(), GridItem() ,GridItem()]) {
                     ForEach(Currency.allCases) { currency in
                         CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                            .shadow(color: .black, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(lineWidth: 3)
+                                    .opacity(0.5)
+                            }
                     }
                 }
                 
