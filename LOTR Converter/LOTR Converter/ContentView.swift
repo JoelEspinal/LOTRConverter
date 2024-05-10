@@ -50,6 +50,10 @@ struct ContentView: View {
                         // Textfield
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
+                            .onChange(of: leftAmount) {
+                                rightAmount = leftCurrency
+                                    .convert(leftAmount, to: rightCurrency)
+                            }
                     }
                     Image(systemName: "equal")
                         .font(.largeTitle)
